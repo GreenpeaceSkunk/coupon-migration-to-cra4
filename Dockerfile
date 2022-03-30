@@ -6,11 +6,11 @@ ENV PATH /home/app/coupon/node_modules/.bin:$PATH
 
 COPY package*.json ./
 
+COPY . .
+
 RUN npm install react-scripts -g
 RUN npm install
 RUN npm run types
-
-COPY . .
 
 FROM base as production
 
